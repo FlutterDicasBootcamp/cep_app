@@ -1,0 +1,36 @@
+name: cep_app
+description: "A new Flutter project."
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+
+dependencies:
+  dio: ^5.3.4
+  shared_preferences: ^2.2.2
+  flutter_riverpod: ^2.4.9
+  equatable: ^2.0.5
+  mocktail: ^1.0.1
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  state_notifier_test: ^0.0.10
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
