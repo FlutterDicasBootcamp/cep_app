@@ -6,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 final apiProvider = Provider<ApiService>(
   (ref) => DioService(Dio(
     BaseOptions(
-      baseUrl: 'https://viacep.com.br/ws/',
+      baseUrl: 'https://viacep.com.br/ws',
       connectTimeout: const Duration(seconds: 15),
       receiveTimeout: const Duration(seconds: 15),
     ),

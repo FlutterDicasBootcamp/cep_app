@@ -22,7 +22,7 @@ class GetCepDetailsByCepRemoteDataSourceImpl
   @override
   Future<Either<CepRemoteException, CepResponseModel>> call(
       GetCepDetailsByCepBody cepBody) async {
-    final cepEither = await _api.get('/ws/${cepBody.cep}/json/');
+    final cepEither = await _api.get('/${cepBody.cep}/json/');
 
     switch (cepEither) {
       case Left(value: final l):
