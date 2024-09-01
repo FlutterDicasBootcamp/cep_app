@@ -7,3 +7,7 @@ base class CepException extends BaseException {
 final class CepLocalException extends CepException {
   CepLocalException({super.message});
 }
+
+final class CepRemoteException extends CepException {
+  CepRemoteException({super.message});
+}

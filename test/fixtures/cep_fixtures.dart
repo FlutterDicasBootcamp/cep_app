@@ -24,6 +24,8 @@ const String tCepLocalResponse =
 
 const tGetCepDetailsByCepBodyRight = GetCepDetailsByCepBody(cep: '589389032');
 
+const tGetCepDetailsByCepBodyLeft = GetCepDetailsByCepBody(cep: 'fwjieafijw');
+
 const tGetCepDetailsByLocalDetailsBodyRight = GetCepDetailsByLocalDetailsBody(
   estado: 'SP',
   cidade: 'Sao Paulo',
