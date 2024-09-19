@@ -1,6 +1,8 @@
 import 'package:cep_app/features/cep/data/data_sources/errors/cep_exceptions.dart';
 import 'package:cep_app/features/cep/data/data_sources/local/get_cep_details_by_cep_local_data_source.dart';
+import 'package:cep_app/features/cep/data/data_sources/local/get_cep_details_by_local_details_local_data_source.dart';
 import 'package:cep_app/features/cep/data/data_sources/remote/get_cep_details_by_cep_remote_data_source.dart';
+import 'package:cep_app/features/cep/data/data_sources/remote/get_cep_details_by_local_details_remote_data_source.dart';
 import 'package:cep_app/features/cep/data/models/cep_response_model.dart';
 import 'package:cep_app/features/cep/data/repositories/cep_repository_impl.dart';
 import 'package:cep_app/features/cep/domain/repositories/cep_repository.dart';
@@ -17,10 +19,22 @@ class MockGetCepDetailsByCepLocalDataSource extends Mock
 class MockGetCepDetailsByCepRemoteDataSource extends Mock
     implements GetCepDetailsByCepRemoteDataSource {}
 
+class MockGetCepDetailsByLocalDetailsLocalDataSource extends Mock
+    implements GetCepDetailsByLocalDetailsLocalDataSource {}
+
+class MockGetCepDetailsByLocalDetailsRemoteDataSource extends Mock
+    implements GetCepDetailsByLocalDetailsRemoteDataSource {}
+
 void main() {
   late GetCepDetailsByCepLocalDataSource mockGetCepDetailsByCepLocalDataSource;
   late GetCepDetailsByCepRemoteDataSource
       mockGetCepDetailsByCepRemoteDataSource;
+
+  late GetCepDetailsByLocalDetailsLocalDataSource
+      mockGetCepDetailsByLocalDetailsLocalDataSource;
+  late GetCepDetailsByLocalDetailsRemoteDataSource
+      mockGetCepDetailsByLocalDetailsRemoteDataSource;
+
   late CepRepository cepRepository;
 
   setUp(() {
@@ -29,8 +43,17 @@ void main() {
     mockGetCepDetailsByCepRemoteDataSource =
         MockGetCepDetailsByCepRemoteDataSource();
 
-    cepRepository = CepRepositoryImpl(mockGetCepDetailsByCepLocalDataSource,
-        mockGetCepDetailsByCepRemoteDataSource);
+    mockGetCepDetailsByLocalDetailsLocalDataSource =
+        MockGetCepDetailsByLocalDetailsLocalDataSource();
+    mockGetCepDetailsByLocalDetailsRemoteDataSource =
+        MockGetCepDetailsByLocalDetailsRemoteDataSource();
+
+    cepRepository = CepRepositoryImpl(
+      mockGetCepDetailsByCepLocalDataSource,
+      mockGetCepDetailsByCepRemoteDataSource,
+      mockGetCepDetailsByLocalDetailsLocalDataSource,
+      mockGetCepDetailsByLocalDetailsRemoteDataSource,
+    );
 
     registerFallbackValue(tGetCepDetailsByCepBodyRight);
     registerFallbackValue(tCepObject);
