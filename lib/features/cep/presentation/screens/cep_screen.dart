@@ -1,4 +1,5 @@
-import 'package:cep_app/features/cep/presentation/widgets/cep_screen_app_bar_widget.dart';
+import 'package:cep_app/features/cep/presentation/widgets/app_bar/cep_screen_app_bar_widget.dart';
+import 'package:cep_app/features/cep/presentation/widgets/tabs/search_by_cep_tab_widget.dart';
 import 'package:flutter/material.dart';
 
 class CepScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class CepScreen extends StatelessWidget {
     return CepScreenAppBarWidget(
       title: 'Cep App - Clean Architecture',
       tabs: [
-        Center(child: Text('Tab 1')),
+        SearchByCepTabWidget(),
         Center(child: Text('Tab 2')),
       ],
     );
