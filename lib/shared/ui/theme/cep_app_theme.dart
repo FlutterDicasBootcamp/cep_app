@@ -69,6 +69,10 @@ sealed class CepAppTheme {
         color: CepAppColors.blackColor,
         fontSize: 20,
       ),
+      titleLarge: TextStyle(
+        color: CepAppColors.blackColor,
+        fontSize: 24,
+      ),
     ),
   );
 
@@ -94,6 +98,9 @@ sealed class CepAppTheme {
         color: CepAppColors.whiteColor,
       ),
       titleMedium: light.textTheme.titleMedium!.copyWith(
+        color: CepAppColors.whiteColor,
+      ),
+      titleLarge: light.textTheme.titleLarge!.copyWith(
         color: CepAppColors.whiteColor,
       ),
     ),

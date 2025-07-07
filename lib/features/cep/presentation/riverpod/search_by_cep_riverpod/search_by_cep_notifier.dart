@@ -30,7 +30,7 @@ final class SearchByCepNotifier extends StateNotifier<SearchByCepState> {
     switch (cepEither) {
       case Left(value: final l):
         {
-          final noInternetError = l is CepInternetConnectionException;
+          final bool noInternetError = l is CepInternetConnectionException;
 
           if (noInternetError && context.mounted) {
             context.showSnackBar(SnackBarType.error, l.message);
