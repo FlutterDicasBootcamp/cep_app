@@ -1,5 +1,5 @@
 import 'package:cep_app/features/cep/domain/entities/get_cep_details_by_cep_body.dart';
-import 'package:cep_app/features/cep/presentation/cep_tec_mixin.dart';
+import 'package:cep_app/features/cep/presentation/mixins/cep_tec_mixin.dart';
 import 'package:cep_app/features/cep/presentation/const/validation_messages_const.dart';
 import 'package:cep_app/features/cep/presentation/riverpod/base_cep_app_state.dart';
 import 'package:cep_app/features/cep/presentation/riverpod/search_by_cep_riverpod/cep_notifier_provider.dart';
