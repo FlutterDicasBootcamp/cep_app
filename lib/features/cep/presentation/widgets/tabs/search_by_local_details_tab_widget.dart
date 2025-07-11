@@ -78,7 +78,7 @@ class _SearchByLocalDetailsTabWidgetState
                 placeholder: 'Cidade',
                 validator: (String? cidade) {
                   if (cidade == null || cidade.isEmpty) {
-                    return ValidationMessagesConst.notEmpty('Estado');
+                    return ValidationMessagesConst.notEmpty('Cidade');
                   }
                   return null;
                 },
@@ -90,7 +90,7 @@ class _SearchByLocalDetailsTabWidgetState
                 placeholder: 'Rua',
                 validator: (String? rua) {
                   if (rua == null || rua.isEmpty) {
-                    return ValidationMessagesConst.notEmpty('Estado');
+                    return ValidationMessagesConst.notEmpty('Rua');
                   }
                   return null;
                 },

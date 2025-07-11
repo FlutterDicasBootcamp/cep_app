@@ -21,7 +21,7 @@ class GetCepDetailsByLocalDetailsRemoteDataSourceImpl
   Future<Either<CepRemoteException, List<CepResponseModel>>> call(
       GetCepDetailsByLocalDetailsBody localDetailsBody) async {
     final cepDetailsByLocalDetailsEither = await _api.get(
-        '${localDetailsBody.estado}/${localDetailsBody.cidade}/${localDetailsBody.rua}/json/');
+        '/${localDetailsBody.estado}/${localDetailsBody.cidade}/${localDetailsBody.rua}/json/');
 
     switch (cepDetailsByLocalDetailsEither) {
       case Left(value: final l):
